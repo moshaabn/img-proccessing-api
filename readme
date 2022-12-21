@@ -1,0 +1,13 @@
+This project is for udacity 
+
+to use:
+
+npm i
+
+npm run start:dev
+
+then go to your browser and type in the url
+
+http://localhost:3000/api/images/resize?width=300&height=500&image=fjord
+
+thanks
