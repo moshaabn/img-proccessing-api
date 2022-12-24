@@ -41,11 +41,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var path_1 = __importDefault(require("path"));
 var imageService_1 = require("../services/imageService");
-describe('Testing image processing', function () {
+describe("Testing image processing", function () {
     var input = path_1.default.resolve("public/images/example.png");
     var wronginput = path_1.default.resolve("public/images/exampleImage.png");
     var output = path_1.default.resolve((0, imageService_1.getOutputPath)("jpg", "image", 200, 200));
-    it('error if the wrong filename is provided', function () { return __awaiter(void 0, void 0, void 0, function () {
+    it("error if the wrong filename is provided", function () { return __awaiter(void 0, void 0, void 0, function () {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, expectAsync((0, imageService_1.resizeImage)(output, wronginput, 200, 200)).toBeRejected()];
@@ -55,7 +55,7 @@ describe('Testing image processing', function () {
             }
         });
     }); });
-    it('success if right extention filename, height and width parameters', function () { return __awaiter(void 0, void 0, void 0, function () {
+    it("success if right extention filename, height and width parameters", function () { return __awaiter(void 0, void 0, void 0, function () {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, expectAsync((0, imageService_1.resizeImage)(output, input, 200, 200)).toBeResolved()];

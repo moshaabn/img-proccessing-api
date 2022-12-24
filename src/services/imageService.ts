@@ -1,4 +1,4 @@
-import sharp from 'sharp';
+import sharp from "sharp";
 
 const resizeImage = async (
     output: string,
@@ -13,7 +13,7 @@ const resizeImage = async (
                 height: height,
             })
             .toFile(output);
-            return output;
+        return output;
     } catch (error) {
         console.log(error);
         throw error;
@@ -21,12 +21,12 @@ const resizeImage = async (
 };
 
 const getOutputPath = (
-    extention: string,
+    extension: string,
     filename: string,
     height: number,
     width: number
 ): string => {
-    return `public/images/thumbs/${filename}-${height}-${width}.${extention}`;
+    return `public/images/thumbs/${filename}-${height}-${width}.${extension}`;
 };
 
 export { resizeImage, getOutputPath };
